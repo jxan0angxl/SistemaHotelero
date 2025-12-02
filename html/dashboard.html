@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dashboard - Hospedaje El Cielo</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <!-- CABECERA PRINCIPAL -->
+  <header>
+    <nav aria-label="Barra principal" class="header-nav">
+      <div class="marca">
+        <a href="index.html" class="logo">Hospedaje El Cielo</a>
+      </div>
+
+      <div class="nav-acciones" role="navigation" aria-label="Acciones de usuario">
+        <span id="usuarioActual" aria-live="polite"></span>
+        <button id="btnLogout" class="btn small" aria-label="Cerrar sesión">Cerrar sesión</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <div class="contenedor dashboard-grid" role="main">
+
+      <!-- ASIDE: FILTROS Y ACCIONES -->
+      <aside aria-labelledby="titulo-acciones" class="panel-filtros">
+        <h2 id="titulo-acciones">Acciones</h2>
+
+        <form id="formBusqueda" role="search" aria-label="Buscar reservas" class="filtros-form">
+          <div class="fila">
+            <label for="inputBuscar" class="sr-only">Buscar</label>
+            <input type="search" id="inputBuscar" placeholder="Buscar por nombre, correo, teléfono o habitación">
+            <button id="btnBuscar" class="btn" type="button">Buscar</button>
+            <button id="btnLimpiar" class="btn ghost" type="button">Limpiar</button>
+          </div>
+
+          <div class="fila">
+            <label for="fechaDesde">Desde</label>
+            <input type="date" id="fechaDesde" name="fechaDesde">
+            <label for="fechaHasta">Hasta</label>
+            <input type="date" id="fechaHasta" name="fechaHasta">
+            <button id="btnFiltrar" class="btn" type="button">Filtrar</button>
+          </div>
+        </form>
+
+        <div class="fila acciones-export">
+          <button id="btnExportCSV" class="btn" type="button">Exportar CSV</button>
+          <button id="btnExportExcel" class="btn" type="button">Exportar Excel</button>
+          <button id="btnExportPDF" class="btn" type="button">Exportar / Imprimir</button>
+        </div>
+
+        <div class="fila">
+          <button id="btnAgregarReserva" class="btn" type="button">Agregar reserva manual</button>
+        </div>
+
+        <hr>
+
+        <section aria-labelledby="estadisticas-title" class="estadisticas" role="region">
+          <h3 id="estadisticas-title">Estadísticas</h3>
+          <p>Total reservas: <strong id="statTotal">0</strong></p>
+          <p>Habitación más reservada: <strong id="statTop">-</strong></p>
+
+          <figure>
+            <canvas id="chartBar" width="360" height="220" role="img" aria-label="Gráfico de reservas por tipo de habitación"></canvas>
+            <figcaption>Distribución de reservas por tipo de habitación</figcaption>
+          </figure>
+        </section>
+      </aside>
+
+      <!-- SECCIÓN PRINCIPAL: TABLA -->
+      <section aria-labelledby="titulo-reservas" class="panel-tabla">
+        <h2 id="titulo-reservas">Reservas</h2>
+
+        <article class="tabla-wrapper" aria-live="polite" aria-relevant="additions removals">
+          <table class="tabla" id="tablaReservas" role="table" aria-describedby="titulo-reservas">
+            <caption class="sr-only">Listado de reservas registradas</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Habitación</th>
+                <th scope="col">Llegada</th>
+                <th scope="col">Salida</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Renglones generados por JS -->
+            </tbody>
+          </table>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- DIALOG SEMÁNTICO para editar/agregar reserva -->
+  <dialog id="modal" aria-labelledby="modalTitulo" class="modal">
+    <form method="dialog" id="formModal" class="formulario" onsubmit="return false;">
+      <h3 id="modalTitulo">Editar reserva</h3>
+
+      <input type="hidden" id="idxReserva" value="">
+
+      <label for="modalNombre">Nombre
+        <input id="modalNombre" type="text" required>
+      </label>
+
+      <label for="modalTelefono">Teléfono
+        <input id="modalTelefono" type="tel">
+      </label>
+
+      <label for="modalCorreo">Correo
+        <input id="modalCorreo" type="email" required>
+      </label>
+
+      <label for="modalHabitacion">Habitación
+        <select id="modalHabitacion" required>
+          <option value="Simple">Simple</option>
+          <option value="Doble">Doble</option>
+          <option value="Matrimonial">Matrimonial</option>
+          <option value="Suite">Suite</option>
+        </select>
+      </label>
+
+      <label for="modalLlegada">Llegada
+        <input id="modalLlegada" type="date" required>
+      </label>
+
+      <label for="modalSalida">Salida
+        <input id="modalSalida" type="date" required>
+      </label>
+
+      <menu>
+        <button id="btnGuardarModal" class="btn" type="button">Guardar</button>
+        <button id="btnCerrarModal" class="btn ghost" type="button">Cancelar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- PIE -->
+  <footer>
+    <p>© 2025 Hospedaje El Cielo — Panel</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+/* =========================================================== 
+    RESET GLOBAL
+=========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================== 
+    ESTILOS GENERALES
+=========================================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fondo claro para el cuerpo */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #0077ff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================== 
+    HEADER (Encabezado)
+=========================================================== */
+header {
+    background-color: #003366; /* Fondo oscuro */
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+}
+
+header nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* =========================================================== 
+    SECCIÓN PRINCIPAL (Hero)
+=========================================================== */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb2101d');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn-reservar {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero .btn-reservar:hover {
+    background-color: #0056b3;
+}
+
+/* =========================================================== 
+    SECCIÓN HABITACIONES
+=========================================================== */
+.destacados {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #003366; /* Fondo oscuro */
+    color: rgb(5, 2, 2);
+    margin-top: 40px;
+}
+
+.destacados h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.grid-habitaciones {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden si hay poco espacio */
+}
+
+.habitacion {
+    width: 30%; /* Cada tarjeta ocupa un 30% del ancho */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.habitacion img {
+    width: 100%;
+    height: auto;
+}
+
+.habitacion h3 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.habitacion p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.habitacion .btn-detalles {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.habitacion .btn-detalles:hover {
+    background-color: #0056b3;
+}
+
+.habitacion:hover {
+    transform: translateY(-10px);
+}
+
+/* =========================================================== 
+    SECCIÓN DE SERVICIOS
+=========================================================== */
+.servicios {
+    padding: 4rem 2rem;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.servicios-lista {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    width: 30%;
+    text-align: center;
+}
+
+.servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.servicio h3 {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.servicio p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* =========================================================== 
+    SECCIÓN DE CONTACTO
+=========================================================== */
+#contacto {
+    padding: 4rem 2rem;
+    background-color: white;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#contacto .redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contacto .redes-sociales a {
+    font-size: 2rem;
+    color: #333;
+}
+
+#contacto .redes-sociales a:hover {
+    color: #007bff;
+}
+
+/* =========================================================== 
+    FOOTER
+=========================================================== */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* =========================================================== 
+    FORMULARIO DE CONTACTO
+=========================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+form label {
+    font-size: 1rem;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* =========================================================== 
+    METODOS DE PAGO (sección)
+=========================================================== */
+.metodos-pago {
+    padding: 4rem 2rem;
+    background-color: white;
+    text-align: center;
+}
+
+.metodos-pago h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.metodos-pago .metodo {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.metodos-pago img {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+/* =========================================================== 
+    PAGINACIÓN
+=========================================================== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}

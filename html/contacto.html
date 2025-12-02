@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Hospedaje El Cielo</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">Hospedaje El Cielo</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a class="activo" href="contacto.html">Contacto</a></li>
+                <li><a href="metodos-pago.html">Métodos de Pago</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="contenedor">
+
+        <h2 class="titulo-seccion">Contáctanos</h2>
+        <p class="descripcion-seccion">
+            Estamos aquí para ayudarte. Completa el formulario o utiliza los medios de contacto directo.
+        </p>
+
+        <section class="contacto-wrapper">
+
+            <!-- FORMULARIO -->
+            <form id="formContacto" class="formulario">
+
+                <label for="nombreContacto">Nombre completo:</label>
+                <input type="text" id="nombreContacto" placeholder="Ejemplo: Juan Pérez">
+
+                <label for="correoContacto">Correo electrónico:</label>
+                <input type="email" id="correoContacto" placeholder="Ejemplo: correo@gmail.com">
+
+                <label for="telefonoContacto">Teléfono:</label>
+                <input type="tel" id="telefonoContacto" placeholder="Ejemplo: 940 123 456">
+
+                <label for="mensajeContacto">Mensaje:</label>
+                <textarea id="mensajeContacto" rows="4" placeholder="Escribe tu consulta aquí"></textarea>
+
+                <button type="submit" class="btn">Enviar Mensaje</button>
+
+                <p id="mensajeConfirmacion" class="mensaje-resultado"></p>
+            </form>
+
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <aside class="info-contacto">
+                <h3>Información directa</h3>
+
+                <p><strong>📍 Dirección:</strong><br>
+                    Jr. Los Álamos 123, Tumbes – Perú</p>
+
+                <p><strong>📞 Teléfono:</strong><br>
+                    +51 940 955 251</p>
+
+                <p><strong>📧 Correo:</strong><br>
+                    contacto@hospedajeelcielo.com</p>
+
+                <p><strong>🕒 Horario:</strong><br>
+                    Atención 24 horas</p>
+
+                <!-- MAPA DE GOOGLE -->
+                <div class="mapa">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.4661502129839!2d-80.455!3d-3.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMyAzMyAxOS4xIlMgODDCsDI3JzE4LjAiVw!5e0!3m2!1ses!2spe!4v1700000000000"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Hospedaje El Cielo — Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

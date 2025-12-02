@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospedaje El Cielo - Habitaciones y Servicios</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <strong>Hospedaje El Cielo</strong>
+        <span>Tumbes • Perú</span>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-label="Abrir menú" type="button" id="navToggle">
+          <span></span>
+        </button>
+        <ul class="nav-list" id="navMenu">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="#habitaciones">Habitaciones</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-ghost" href="login.html">Iniciar sesión</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HABITACIONES -->
+    <section id="habitaciones">
+      <div class="container">
+        <h1 class="section-title">Nuestras habitaciones</h1>
+        <p class="section-subtitle">
+          Elige la habitación que mejor se adapte a tu viaje. Todas incluyen Wi-Fi, agua caliente,
+          TV por cable y desayuno continental.
+        </p>
+        <div class="cards-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1590490359854-dfba19688d70?auto=format&fit=crop&w=900&q=80" alt="Habitación simple">
+            <div class="card-body">
+              <h2>Habitación Simple</h2>
+              <p>Perfecta para viajeros que buscan comodidad y buen precio en una habitación acogedora.</p>
+              <div class="chip-row">
+                <span class="price">S/ 90 noche</span>
+                <span class="chip">1 huésped • Cama plaza y media</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80" alt="Habitación doble">
+            <div class="card-body">
+              <h2>Habitación Doble</h2>
+              <p>Ideal para parejas o amigos que desean más espacio y comodidad durante su estadía.</p>
+              <div class="chip-row">
+                <span class="price">S/ 140 noche</span>
+                <span class="chip">2 huéspedes • Cama Queen</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1595511893254-2936829db45e?auto=format&fit=crop&w=900&q=80" alt="Habitación familiar">
+            <div class="card-body">
+              <h2>Habitación Familiar</h2>
+              <p>Espacio amplio para compartir en familia, con camas cómodas y vista a la ciudad.</p>
+              <div class="chip-row">
+                <span class="price">S/ 210 noche</span>
+                <span class="chip">Hasta 4 huéspedes • 2 camas dobles</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+      <div class="container">
+        <h1 class="section-title">Servicios para tu comodidad</h1>
+        <p class="section-subtitle">
+          Pensamos en los detalles para que solo te preocupes por disfrutar. Nuestros principales servicios son:
+        </p>
+        <div class="cards-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?auto=format&fit=crop&w=900&q=80" alt="Wifi alta velocidad">
+            <div class="card-body">
+              <h2>Wi-Fi alta velocidad</h2>
+              <p>Conexión estable en todas las áreas del hospedaje, ideal para trabajo remoto o entretenimiento.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1556911073-52527ac437f5?auto=format&fit=crop&w=900&q=80" alt="Desayuno incluído">
+            <div class="card-body">
+              <h2>Desayuno incluido</h2>
+              <p>Pan recién horneado, jugo natural, frutas de la zona y bebidas calientes cada mañana.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1519821172141-b5d8c5d6b4e5?auto=format&fit=crop&w=900&q=80" alt="Piscina y áreas comunes">
+            <div class="card-body">
+              <h2>Piscina y terraza</h2>
+              <p>Relájate en la piscina al aire libre y disfruta del atardecer tumbesino desde nuestra terraza.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80" alt="Recepción 24 horas">
+            <div class="card-body">
+              <h2>Recepción 24 horas</h2>
+              <p>Te acompañamos en todo momento para resolver tus dudas y ayudarte con tus planes de viaje.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="container">
+        <h1 class="section-title">Contáctanos</h1>
+        <p class="section-subtitle">
+          ¿Tienes alguna duda, requieres una cotización para grupo o necesitas ayuda con tu reserva?
+          Escríbenos y te responderemos lo antes posible.
+        </p>
+        <div class="contact-layout">
+          <div>
+            <form id="contactForm">
+              <div class="field">
+                <label for="nombreContacto">Nombre completo</label>
+                <input id="nombreContacto" name="nombreContacto" required placeholder="Ejemplo: Ana López">
+              </div>
+              <div class="field">
+                <label for="correoContacto">Correo electrónico</label>
+                <input id="correoContacto" type="email" name="correoContacto" required placeholder="Ejemplo: ana@gmail.com">
+              </div>
+              <div class="field">
+                <label for="telefonoContacto">Teléfono</label>
+                <input id="telefonoContacto" type="tel" name="telefonoContacto" placeholder="Ejemplo: 940 123 456">
+              </div>
+              <div class="field">
+                <label for="mensajeContacto">Mensaje</label>
+                <textarea id="mensajeContacto" name="mensajeContacto" required placeholder="Escribe tu consulta aquí"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+              <p id="contactStatus" class="status-message" aria-live="polite"></p>
+            </form>
+          </div>
+          <aside aria-label="Información de contacto y ubicación">
+            <div class="contact-details">
+              <p><strong>Dirección:</strong> Jr. Las Nubes 123, Tumbes, Perú</p>
+              <p><strong>Teléfono:</strong> +51 957 599 011</p>
+              <p><strong>Correo:</strong> contacto@hospedajeelcielo.com</p>
+              <p><strong>Horario de atención:</strong> Lunes a domingo, 24 horas.</p>
+            </div>
+            <div class="contact-map" aria-hidden="false">
+              <iframe
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6283.642975428337!2d-80.457!3d-3.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9035d1c9c8f0a0c5%3A0x0000000000000000!2sTumbes!5e0!3m2!1ses-419!2spe!4v1700000000000">
+              </iframe>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 Hospedaje El Cielo • Tumbes, Perú</p>
+      <p>Teléfono: +51 957 599 011 • Correo: contacto@hospedajeelcielo.com</p>
+    </div>
+  </footer>
+</body>
+</html>

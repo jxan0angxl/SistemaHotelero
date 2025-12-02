@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Hospedaje El Cielo</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">Hospedaje El Cielo</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a class="activo" href="reservas.html">Reservas</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="metodos-pago.html">Métodos de Pago</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+
+        <h2 class="titulo-seccion">Reserva tu Habitación</h2>
+        <p class="descripcion-seccion">Completa los datos y asegura tu estadía en nuestro hospedaje.</p>
+
+        <!-- FORMULARIO DE RESERVA -->
+        <form id="formReserva" class="formulario">
+
+            <!-- Nombre -->
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" placeholder="Ejemplo: Juan Pérez">
+
+            <!-- Teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" placeholder="Ejemplo: 940 123 456">
+
+            <!-- Correo -->
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Ejemplo: correo@gmail.com">
+
+            <!-- Selección de habitación -->
+            <label for="habitacion">Tipo de habitación:</label>
+            <select id="habitacion">
+                <option value="">Seleccione una opción</option>
+                <option value="Simple">Habitación Simple – S/80</option>
+                <option value="Doble">Habitación Doble – S/120</option>
+                <option value="Matrimonial">Habitación Matrimonial – S/150</option>
+                <option value="Suite">Suite Premium – S/250</option>
+            </select>
+
+            <!-- Fecha inicio -->
+            <label for="fechaInicio">Fecha de llegada:</label>
+            <input type="date" id="fechaInicio">
+
+            <!-- Fecha fin -->
+            <label for="fechaFin">Fecha de salida:</label>
+            <input type="date" id="fechaFin">
+
+            <!-- Comentarios -->
+            <label for="mensaje">Comentarios adicionales (opcional):</label>
+            <textarea id="mensaje" rows="4" placeholder="Requerimientos o notas especiales"></textarea>
+
+            <!-- Botón -->

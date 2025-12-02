@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Hospedaje El Cielo</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="logo">Hospedaje El Cielo</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="login.html" class="activo">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FORMULARIO DE LOGIN -->
+    <main class="contenedor formulario-login">
+
+        <h2 class="titulo-seccion">Iniciar Sesión</h2>
+        <p class="descripcion-seccion">Accede a tu cuenta para gestionar tus reservas.</p>
+
+        <form id="formLogin" class="formulario">
+
+            <label for="correoLogin">Correo electrónico:</label>
+            <input type="email" id="correoLogin" placeholder="Ejemplo: usuario@gmail.com">
+
+            <label for="claveLogin">Contraseña:</label>
+            <input type="password" id="claveLogin" placeholder="••••••••">
+
+            <button type="submit" class="btn">Ingresar</button>
+
+            <p id="mensajeLogin" class="mensaje-resultado"></p>
+
+            <div class="extras-login">
+                <a href="registro.html">¿No tienes cuenta? Crear una</a>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Hospedaje El Cielo — Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>
