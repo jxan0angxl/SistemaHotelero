@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estancias y Servicios · Sistema Hotelero</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+  <div class="contenido-centrado barra">
+    <div class="marca-sitio">
+      <span class="titulo-sitio">Hospedaje El Cielo</span>
+      <span class="subtitulo-sitio">Tumbes · Perú</span>
+    </div>
+    <nav class="navegacion-principal" aria-label="Navegación principal del sitio">
+      <ul class="lista-enlaces" role="list">
+        <li><a class="enlace" href="index.html#inicio">Inicio</a></li>
+        <li><a class="enlace" href="estancias-servicios.html#habitaciones">Estancias y Servicios</a></li>
+        <li><a class="enlace" href="contacto.html">Contacto</a></li>
+        <li><a class="boton-accion boton-accion--primario" href="login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main id="contenido-estancias" class="principal">
+    <section id="habitaciones" class="seccion contenido-centrado" aria-label="Listado de habitaciones">
+      <header>
+        <h1>Estancias disponibles</h1>
+        <p class="detalle">Todas incluyen Wi-Fi, agua caliente.</p>
+      </header>
+
+      <section class="listado-habitaciones" aria-label="Tarjetas de habitaciones">
+        <article class="habitacion" aria-labelledby="titulo-simple">
+          <header><h2 id="titulo-simple">Habitación Simple</h2></header>
+          <figure>
+            <img src="img/H SIMPLE.png" alt="Habitación simple con cama de plaza y media">
+            <figcaption>Para 1 huésped <br> TV pequeña colgada en la pared <br>Ambiente sencillo y compacto.<br>Baño Incluido.
+            </figcaption>
+          </figure>
+          <section class="cuerpo"><p class="detalle"><br><br><br><br><br><br>Habitación acogedora equipada con una cama, TV instalada en pared y baño incluido. Ambiente sencillo y funcional, ideal para, estudiantes, viajeros, etc. Que buscan comodidad a buen precio.</p></section>
+          <footer><p class="precio"><br>S/ 25 por dia</p></footer>
+        </article>
+
+        <article class="habitacion" aria-labelledby="titulo-doble">
+          <header><h2 id="titulo-doble">Habitación Doble</h2></header>
+          <figure>
+            <img src="img/h DOBLE.png" alt="Habitación doble con cama Queen">
+            <figcaption>2 huéspedes <br>2 camas. <br>Pared lisa blanca. <br>Ventana amplia con bastante luz. <br>Mesa o soporte al lado. <br>Ambiente más amplio que la simple. <br>Baño Incluido
+            </figcaption>
+          </figure>
+          <section class="cuerpo"><p class="detalle"><br><br><br>Habitación doble con dos camas individuales amplias, excelente iluminación natural y ambiente cómodo para dos personas. Perfecta para amigos o viajeros que prefieren camas separadas. Incluye TV y ventilación adecuada.</p></section>
+          <footer><p class="precio">S/ 55 por dia</p></footer>
+        </article>
+
+        <article class="habitacion" aria-labelledby="titulo-familiar">
+          <header><h2 id="titulo-familiar">Habitación Familiar</h2></header>
+          <figure>
+            <img src="img/HABITACION FAMILIAR.png" alt="Habitación familiar con dos camas dobles">
+            <figcaption>Hasta 4 huéspedes. <br>Dos camas dobles amplias.<br>Cuarto bastante grande y luminoso. <br>Ventana de gran tamaño que ilumina toda la habitación. <br>Mesa de noche y decoración más cuidada.<br>Paredes claras y buena distribución del espacio <br>Baño Incluido.
+
+
+</figcaption>
+          </figure>
+          <section class="cuerpo"><p class="detalle">Habitación familiar amplia y luminosa, equipada con dos camas dobles, ventilación natural y mobiliario cómodo para estancias prolongadas. Ideal para familias de hasta cuatro personas que buscan espacio y confort.</p></section>
+          <footer><p class="precio">S/ 110 por dia</p></footer>
+        </article>
+      </section>
+    </section>
+
+    <section id="servicios" class="seccion contenido-centrado" aria-label="Servicios disponibles">
+      <header>
+        <h2>Servicios incluidos</h2>
+        <p class="detalle">Pensados para que solo te preocupes por disfrutar.</p>
+      </header>
+
+      <section class="lista-servicios" aria-label="Tarjetas de servicios">
+        <article class="servicio" aria-labelledby="s-wifi">
+          <img src="img/wifi.png" alt="Icono de Wi-Fi">
+          <header><h3 id="s-wifi">Wi-Fi alta velocidad</h3></header>
+          <p class="detalle">Conexión estable en todas las áreas del hospedaje.</p>
+        </article>
+
+        <article class="servicio" aria-labelledby="s-desayuno">
+          <img src="img/DESAYUNO.jpg" alt="Icono de desayuno">
+          <header><h3 id="s-desayuno">Desayuno incluido</h3></header>
+          <p class="detalle">Pan del día, jugo natural y bebidas calientes.</p>
+        </article>
+
+        <article class="servicio" aria-labelledby="s-24h">
+          <img src="img/RECEPCION.png" alt="Icono de recepción 24 horas">
+          <header><h3 id="s-24h">Recepción 24 horas</h3></header>
+          <p class="detalle">Asistencia continua para tus necesidades.</p>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="pie-de-pagina">
+  <section class="contenido-centrado datos" aria-label="Datos del hospedaje">
+    <address class="direccion">
+      <strong>Francisco Navarrete·<br>Tel: +51 957 599 011.</strong>
+      <a href="mailto:contacto@hospedajeelcielo.com"><br>contacto@hospedajeelcielo.com</a>
+    </address>
+    <p><strong>© 2025 Hospedaje El Cielo.</strong> </p>
+  </section>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>

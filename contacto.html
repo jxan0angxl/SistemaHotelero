@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto · Sistema Hotelero</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+  <div class="contenido-centrado barra">
+    <div class="marca-sitio">
+      <span class="titulo-sitio">Hospedaje El Cielo</span>
+      <span class="subtitulo-sitio">Tumbes · Perú</span>
+    </div>
+    <nav class="navegacion-principal" aria-label="Navegación principal del sitio">
+      <ul class="lista-enlaces" role="list">
+        <li><a class="enlace" href="index.html#inicio">Inicio</a></li>
+        <li><a class="enlace" href="estancias-servicios.html#habitaciones">Estancias y Servicios</a></li>
+        <li><a class="enlace" href="contacto.html">Contacto</a></li>
+        <li><a class="boton-accion boton-accion--primario" href="login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main id="contenido-contacto" class="principal">
+    <section class="seccion contenido-centrado" aria-label="Formulario y datos de contacto">
+      <header>
+        <h1>Contáctanos</h1>
+        <p class="detalle">Déjanos tu mensaje y te responderemos pronto.</p>
+      </header>
+
+      <form class="formulario-contacto">
+        <fieldset>
+          <legend class="oculto-visualmente">Formulario de contacto</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" name="nombre" required placeholder="Ejemplo: Ana López">
+
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" required placeholder="Ejemplo: ana@gmail.com">
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu consulta aquí"></textarea>
+
+          <button class="boton-accion boton-accion--primario" type="button" onclick="enviarContacto()">
+            Enviar
+          </button>
+        </fieldset>
+      </form>
+
+      <address class="direccion" aria-label="Dirección y medios de contacto" style="margin-top:1rem">
+        <b>Las Nubes 123, Tumbes, Perú · Tel: +51 957 599 011 </b> 
+        <a href="mailto:contacto@hospedajeelcielo.com"><br>contacto@hospedajeelcielo.com</a>
+      </address>
+      <section aria-label="Mapa de ubicación" class="contenedor-mapa" style="margin-top:1rem">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1345751971703!2d-80.4269685!3d-3.5564546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x90338d7b2bc7726b%3A0x2a53acc6917ed40c!2sPuyango!5e0!3m2!1ses!2spe!4v1765317824706!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </section>
+  </main>
+
+  <footer class="pie-de-pagina">
+  <section class="contenido-centrado datos" aria-label="Datos del hospedaje">
+    <address class="direccion">
+      <strong>Francisco Navarrete·<br>Tel: +51 957 599 011.</strong>
+      <a href="mailto:contacto@hospedajeelcielo.com"><br>contacto@hospedajeelcielo.com</a>
+    </address>
+    <p><strong>© 2025 Hospedaje El Cielo.</strong> </p>
+  </section>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>

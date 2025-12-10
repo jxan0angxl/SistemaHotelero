@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar · Sistema Hotelero</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+  <div class="contenido-centrado barra">
+    <div class="marca-sitio">
+      <span class="titulo-sitio">Hospedaje El Cielo</span>
+      <span class="subtitulo-sitio">Tumbes · Perú</span>
+    </div>
+    <nav class="navegacion-principal" aria-label="Navegación principal del sitio">
+      <ul class="lista-enlaces" role="list">
+        <li><a class="enlace" href="index.html#inicio">Inicio</a></li>
+        <li><a class="enlace" href="estancias-servicios.html#habitaciones">Estancias y Servicios</a></li>
+        <li><a class="enlace" href="contacto.html">Contacto</a></li>
+        <li><a class="boton-accion boton-accion--primario" href="login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="principal">
+    <section class="seccion contenido-centrado">
+      <h1>Reservar tu estadía</h1>
+      <p class="detalle">
+        Completa tus datos, elige la habitación y el sistema calculará el total como en una página de reservas real.
+      </p>
+    </section>
+
+    <section class="seccion contenido-centrado" aria-label="Formulario de reserva">
+      <form class="formulario-contacto" onsubmit="guardarReserva(event)">
+        <fieldset>
+          <legend class="oculto-visualmente">Formulario de reserva</legend>
+
+          <label for="nombreReserva">Nombre completo</label>
+          <input id="nombreReserva" name="nombreReserva" required placeholder="Ejemplo: Ana López">
+
+          <label for="correoReserva">Correo electrónico</label>
+          <input id="correoReserva" name="correoReserva" type="email" required placeholder="Ejemplo: ana@gmail.com">
+
+          <label for="tipo_habitacion">Tipo de habitación</label>
+          <select id="tipo_habitacion" name="tipo_habitacion" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Simple">Habitación Simple - S/ 25 por día</option>
+            <option value="Doble">Habitación Doble - S/ 55 por día</option>
+            <option value="Familiar">Habitación Familiar - S/ 110 por día</option>
+          </select>
+
+          <label for="fecha_ingreso">Fecha de ingreso</label>
+          <input id="fecha_ingreso" name="fecha_ingreso" type="date" required>
+
+          <label for="fecha_salida">Fecha de salida</label>
+          <input id="fecha_salida" name="fecha_salida" type="date" required>
+
+          <label for="metodo_pago">Método de pago</label>
+          <select id="metodo_pago" name="metodo_pago" required>
+            <option value="">Selecciona...</option>
+            <option value="Yape">Yape</option>
+            <option value="Plin">Plin</option>
+            <option value="Tarjeta">Tarjeta</option>
+          </select>
+
+          <p class="detalle">
+            Si eliges Yape o Plin, puedes mostrar tu número de celular al profesor, a modo demostrativo.
+          </p>
+
+          <label for="codigo_operacion">Código de operación o referencia</label>
+          <input id="codigo_operacion" name="codigo_operacion" required placeholder="Ejemplo: OP-123456">
+
+          <button class="boton-accion boton-accion--primario" type="submit">
+            Confirmar reserva y pago
+          </button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="seccion contenido-centrado" id="resumen-reserva" style="display:none;">
+      <h2>Resumen de tu reserva</h2>
+      <div class="formulario-contacto" id="detalle-resumen"></div>
+    </section>
+  </main>
+
+  <footer class="pie-de-pagina">
+  <section class="contenido-centrado datos" aria-label="Datos del hospedaje">
+    <address class="direccion">
+      <strong>Francisco Navarrete·<br>Tel: +51 957 599 011.</strong>
+      <a href="mailto:contacto@hospedajeelcielo.com"><br>contacto@hospedajeelcielo.com</a>
+    </address>
+    <p><strong>© 2025 Hospedaje El Cielo.</strong> </p>
+  </section>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>

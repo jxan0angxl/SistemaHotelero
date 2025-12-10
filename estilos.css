@@ -1,0 +1,343 @@
+/* ============================================================
+  ESTILOS PRINCIPALES DEL SISTEMA HOTELERO (CORREGIDO)
+  - Compatible con solo-movil / solo-escritorio
+  - Menú responsivo funcionando sin errores
+  - Clases en español y estructura semántica
+============================================================ */
+
+/* Paleta y variables */
+:root{
+  --color-primario:#2563eb;
+  --color-primario-oscuro:#afd81d;
+  --color-texto:#0f172a;
+  --color-texto-suave:#2a3341;
+  --color-fondo:#edf6fa;
+  --color-blanco:#88caff;
+  --color-borde:#110c0d;
+  --sombra:0 10px 25px rgba(2,6,23,.08);
+  --ancho-max:1120px;
+  --radio:16px;
+}
+
+/* Reset general */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  background:var(--color-fondo);
+  color:var(--color-texto);
+  line-height:1.55;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Accesibilidad */
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline:3px solid var(--color-primario);
+  outline-offset:3px;
+}
+.oculto-visualmente{
+  position:absolute!important;
+  width:1px;height:1px;overflow:hidden;
+  margin:-1px;padding:0;border:0;
+  clip:rect(0 0 0 0);
+}
+
+/* Contenedor centrado */
+.contenido-centrado{
+  max-width:var(--ancho-max);
+  margin-inline:auto;
+  padding-inline:1.25rem;
+}
+
+/* ============================================================
+  ENCABEZADO Y MENÚ — VERSIÓN AJUSTADA RESPONSIVA
+============================================================ */
+.encabezado-sitio{
+  position:sticky;
+  top:0;
+  background:hsl(156, 59%, 88%);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--color-borde);
+  z-index:50;
+}
+
+.encabezado-sitio .barra{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.8rem 1rem;
+  flex-wrap:wrap; /*  evita que se salga del contenedor */
+  gap:.8rem;      /*  deja un espacio agradable si se parte en dos líneas */
+}
+
+.marca-sitio{
+  display:flex;
+  flex-direction:column;
+  line-height:1.2;
+}
+
+.marca-sitio .titulo-sitio{
+  font-weight:700;
+}
+
+.marca-sitio .subtitulo-sitio{
+  font-size:0.82rem;
+  color:var(--color-texto-suave);
+}
+
+/* UL general del menú */
+.lista-enlaces{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-wrap:wrap;   /*  permite que el botón baje sin romper nada */
+  gap:1rem;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+/* Estilo de cada enlace */
+.enlace{
+  position:relative;
+  padding:.25rem 0;
+}
+.enlace::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-0.2rem;
+  height:2px;
+  width:0;
+  background:var(--color-primario);
+  transition:.2s;
+}
+.enlace:hover::after{
+  width:100%;
+}
+
+/* Botón iniciar sesión */
+.boton-accion{
+  border:1px solid var(--color-borde);
+  background:var(--color-blanco);
+  padding:.4rem .9rem;
+  border-radius:999px;
+  cursor:pointer;
+  white-space:nowrap; /*  evita que se corte el texto “Iniciar sesión” */
+}
+
+.boton-accion--primario{
+  background:var(--color-primario);
+  color:white;
+  font-weight:500;
+}
+.boton-accion--primario:hover{
+  background:var(--color-primario-oscuro);
+}
+
+/*  Asegura buena visualización en pantallas pequeñas */
+@media (max-width:600px){
+  .encabezado-sitio .barra{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .lista-enlaces{
+    width:100%;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    gap:.7rem;
+  }
+}
+/* ============================================================
+  ESTRUCTURA GENERAL
+============================================================ */
+
+.principal{
+  padding-block:2rem 3rem;
+}
+
+.seccion{
+  padding-block:2.2rem;
+}
+.seccion + .seccion{
+  border-top:1px solid var(--color-borde);
+}
+
+.titulo-principal{
+  font-size:clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom:0.5rem;
+}
+
+.texto-introduccion{
+  color:var(--color-texto-suave);
+  max-width:45ch;
+}
+
+/* PORTADA */
+.portada{
+  display:grid;
+  gap:1.6rem;
+  align-items:center;
+}
+@media (min-width:768px){
+  .portada{
+    grid-template-columns:1.2fr 1fr;
+  }
+}
+
+.destacado{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding:.2rem .6rem;
+  border-radius:999px;
+  background:#d8f6ff;
+  color:#1d4ed8;
+  font-size:.8rem;
+}
+
+/* ============================================================
+  HABITACIONES — TARJETAS
+============================================================ */
+
+.listado-habitaciones{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:1.4rem;
+}
+
+.habitacion{
+  background:rgb(226, 241, 245);
+  border:1px solid var(--color-borde);
+  border-radius:var(--radio);
+  box-shadow:var(--sombra);
+  overflow:hidden;
+}
+
+.habitacion img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+}
+
+.habitacion header,
+.habitacion .cuerpo,
+.habitacion footer{
+  padding:1rem 1.2rem;
+}
+
+.precio{
+  font-weight:700;
+}
+
+.detalle{
+  color:var(--color-texto-suave);
+}
+.portada img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ============================================================
+  SERVICIOS
+============================================================ */
+
+.lista-servicios{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.servicio{
+  background:rgb(226, 241, 245);
+  border:1px solid var(--color-borde);
+  border-radius:var(--radio);
+  padding:1rem;
+  box-shadow:var(--sombra);
+}
+.servicio img{
+  width:100%;
+  height:240px ;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ============================================================
+  FORMULARIO CONTACTO
+============================================================ */
+.direccion-contacto{
+  margin-bottom:1.5rem;
+  color:var(--color-texto-suave);
+  color: #000;
+}
+.formulario-contacto{
+  background:rgb(226, 241, 245);
+  border:1px solid var(--color-borde);
+  border-radius:var(--radio);
+  padding:1rem;
+  box-shadow:var(--sombra);
+}
+
+.formulario-contacto fieldset{
+  border:none;
+  padding:0;
+  display:grid;
+  gap:1rem;
+}
+
+.formulario-contacto label{
+  font-size:.9rem;
+  color:var(--color-texto-suave);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea{
+  border:1px solid var(--color-borde);
+  padding:.6rem .8rem;
+  border-radius:10px;
+  font:inherit;
+  width:100%;
+  background:white;
+}
+
+.formulario-contacto textarea{
+  min-height:110px;
+  resize:vertical;
+}
+.contenedor-mapa iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:var(--radio);
+  box-shadow:var(--sombra);
+  display: block;
+}
+.contenedor-mapa{
+  margin-top:1.5rem;
+border-radius: 12px;
+  overflow: hidden ;
+  box-shadow:var(--sombra);
+}
+/* ============================================================
+  PIE DE PÁGINA
+============================================================ */
+
+.pie-de-pagina{
+  background:hsl(156, 59%, 88%);
+  color:#1e1f20;
+  padding-block:1.5rem 2rem;
+  border-top:1px solid var(--color-borde);
+}
+
+.pie-de-pagina .datos{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+
+.direccion{font-style:normal;}

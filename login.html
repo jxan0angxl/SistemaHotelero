@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión · Sistema Hotelero</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+  <div class="contenido-centrado barra">
+    <div class="marca-sitio">
+      <span class="titulo-sitio">Hospedaje El Cielo</span>
+      <span class="subtitulo-sitio">Tumbes · Perú</span>
+    </div>
+    <nav class="navegacion-principal" aria-label="Navegación principal del sitio">
+      <ul class="lista-enlaces" role="list">
+        <li><a class="enlace" href="index.html#inicio">Inicio</a></li>
+        <li><a class="enlace" href="estancias-servicios.html#habitaciones">Estancias y Servicios</a></li>
+        <li><a class="enlace" href="contacto.html">Contacto</a></li>
+        <li><a class="boton-accion boton-accion--primario" href="login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main id="contenido-login" class="principal">
+    <section class="seccion contenido-centrado" aria-label="Acceso al panel">
+      <header>
+        <h1>Iniciar sesión</h1>
+        <p class="detalle">Formulario listo para conectarse a tu sistema (simulado con JavaScript).</p>
+      </header>
+
+      <form class="formulario-contacto" onsubmit="iniciarSesion(event)">
+        <fieldset>
+          <legend class="oculto-visiblemente">Formulario de autenticación</legend>
+
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" required placeholder="Ejemplo: admin@elcielo.com">
+
+          <label for="Contrasena">Contraseña</label>
+          <input id="Contrasena" name="Contrasena" type="password" required placeholder="Escribe tu contraseña">
+          <label><input type="checkbox" name="recordar"> Recordar mi sesión</label>
+
+          <button class="boton-accion boton-accion--primario" type="submit">Entrar</button>
+          <p class="detalle">Los datos se validan con <strong>JavaScript</strong> para esta demo.</p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie-de-pagina">
+  <section class="contenido-centrado datos" aria-label="Datos del hospedaje">
+    <address class="direccion">
+      <strong>Francisco Navarrete·<br>Tel: +51 957 599 011.</strong>
+      <a href="mailto:contacto@hospedajeelcielo.com"><br>contacto@hospedajeelcielo.com</a>
+    </address>
+    <p><strong>© 2025 Hospedaje El Cielo.</strong> </p>
+  </section>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>

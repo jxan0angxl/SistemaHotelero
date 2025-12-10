@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador · Sistema Hotelero</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+  <div class="contenido-centrado barra">
+    <div class="marca-sitio">
+      <span class="titulo-sitio">Hospedaje El Cielo</span>
+      <span class="subtitulo-sitio">Tumbes · Perú</span>
+    </div>
+    <nav class="navegacion-principal" aria-label="Navegación principal del sitio">
+      <ul class="lista-enlaces" role="list">
+        <li><a class="enlace" href="index.html#inicio">Inicio</a></li>
+        <li><a class="enlace" href="estancias-servicios.html#habitaciones">Estancias y Servicios</a></li>
+        <li><a class="enlace" href="contacto.html">Contacto</a></li>
+        <li><a class="boton-accion boton-accion--primario" href="login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="principal contenido-centrado">
+    <section class="seccion">
+      <h1>Panel del Sistema Hotelero</h1>
+      <p class="detalle">
+        Aquí puedes revisar todas las reservas registradas en el sistema, como si fuera un panel real de administración.
+      </p>
+      <p class="detalle">
+        Usuario actual: <span id="nombre-admin"></span>
+      </p>
+      <button class="boton-accion" type="button" onclick="cerrarSesion()">Cerrar sesión</button>
+    </section>
+
+    <section class="seccion" aria-label="Listado de reservas">
+      <h2>Reservas registradas</h2>
+      <div style="overflow-x:auto;">
+        <table class="tabla-reservas">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Huésped</th>
+              <th>Correo</th>
+              <th>Habitación</th>
+              <th>Ingreso</th>
+              <th>Salida</th>
+              <th>Noches</th>
+              <th>Total (S/)</th>
+              <th>Método pago</th>
+              <th>Código operación</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-reservas-admin">
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-de-pagina">
+  <section class="contenido-centrado datos" aria-label="Datos del hospedaje">
+    <address class="direccion">
+      <strong>Francisco Navarrete·<br>Tel: +51 957 599 011.</strong>
+      <a href="mailto:contacto@hospedajeelcielo.com"><br>contacto@hospedajeelcielo.com</a>
+    </address>
+    <p><strong>© 2025 Hospedaje El Cielo.</strong> </p>
+  </section>
+</footer>
+  <script src="app.js"></script>
+</body>
+</html>
